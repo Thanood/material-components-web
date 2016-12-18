@@ -2,11 +2,11 @@ import {inject, bindable, bindingMode, DOM} from 'aurelia-framework';
 import {MDCCheckbox} from '@material/checkbox';
 import '@material/checkbox/dist/mdc.checkbox.css';
 
-@inject(Element)
+@inject(DOM.Element)
 export class MdcCheckbox {
     @bindable({ defaultBindingMode: bindingMode.twoWay }) isChecked = false;
     @bindable({ defaultBindingMode: bindingMode.twoWay }) isIndeterminate = false;
-    @bindable() isDisabled = false;
+    @bindable({ defaultBindingMode: bindingMode.twoWay }) isDisabled = false;
     mdcCheckbox;
 
     constructor(private element: Element) { }

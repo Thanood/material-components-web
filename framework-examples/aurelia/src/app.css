@@ -1,0 +1,24 @@
+.demo-toolbar {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  flex-grow: 0;
+}
+
+.demo-content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+main {
+  padding: 12px;
+}
+
+section {
+  margin: 16px 0;
+}

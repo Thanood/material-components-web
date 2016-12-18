@@ -3,10 +3,10 @@ import {MDCRipple} from '@material/ripple';
 import '@material/ripple/dist/mdc.ripple.css';
 
 @customAttribute('mdc-ripple')
-@inject(Element)
+@inject(DOM.Element)
 export class MdcRipple {
     @bindable() unbounded = false;
-    mdcRipple;
+    mdcRipple: MDCRipple;
 
     constructor(private element: Element) { }
 

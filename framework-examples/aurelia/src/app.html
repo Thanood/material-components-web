@@ -1,5 +1,21 @@
 <template>
-  <div class="page-host">
-    <router-view></router-view>
+  <require from="./app.css"></require>
+  <div class="demo-toolbar mdc-theme--primary-bg mdc-theme--text-primary-on-primary mdc-typography--title mdc-elevation--z4">
+    <span>Aurelia MDC Demo</span>
+    <!--<span style="flex-grow: 1;"></span>
+    <mdc-select mdc-select-label="choose a theme" change.delegate="handleThemeChange($event)">
+      <li mdc-select-option aria-selected>Light</li>
+      <li mdc-select-option>Dark</li>
+    </mdc-select>-->
+  </div>
+  <div class="demo-content">
+    <nav class="mdc-permanent-drawer mdc-typography">
+      <nav class="mdc-list">
+        <a repeat.for="row of router.navigation" class="mdc-list-item ${row.isActive ? 'mdc-permanent-drawer--selected' : ''}" href.bind="row.href">
+          ${row.title}
+        </a>
+      </nav>
+    </nav>
+    <main class="mdc-typography"><router-view></router-view></main>
   </div>
 </template>

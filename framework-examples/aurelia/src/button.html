@@ -1,0 +1,48 @@
+<template>
+  <section>
+    <button mdc-button="accent.bind: accentButtons; compact.bind: compactButtons; dense.bind: denseButtons; raised.bind: raisedButtons; primary.bind: primaryButtons" disabled.bind="disabledButtons">
+      button
+    </button>
+    <button mdc-ripple mdc-button="accent.bind: accentButtons; compact.bind: compactButtons; dense.bind: denseButtons; raised.bind: raisedButtons; primary.bind: primaryButtons" disabled.bind="disabledButtons">
+      button with ripple
+    </button>
+  </section>
+  <section>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="raisedButtons"></mdc-checkbox>
+          Raised buttons
+      </label>
+    </p>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="accentButtons"></mdc-checkbox>
+          Accent buttons
+      </label>
+    </p>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="primaryButtons"></mdc-checkbox>
+          Primary buttons
+      </label>
+    </p>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="disabledButtons"></mdc-checkbox>
+          Disabled buttons
+      </label>
+    </p>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="compactButtons"></mdc-checkbox>
+          Compact buttons
+      </label>
+    </p>
+    <p>
+      <label>
+          <mdc-checkbox is-checked.bind="denseButtons"></mdc-checkbox>
+          Dense buttons
+      </label>
+    </p>
+  </section>
+</template>
