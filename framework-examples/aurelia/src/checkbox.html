@@ -1,0 +1,16 @@
+<template>
+  <section>
+    <label>
+        <mdc-checkbox is-checked.two-way="isChecked" is-indeterminate.bind="isIndeterminate" is-disabled.bind="isDisabled" change.delegate="handleChange()"></mdc-checkbox>
+        Checkbox with value: ${isChecked}
+    </label>
+  </section>
+  <section>
+      <button mdc-ripple mdc-button click.delegate="toggleChecked()">toggle checked</button>
+      <button mdc-ripple mdc-button click.delegate="toggleDisabled()">toggle disabled</button>
+      <button mdc-ripple mdc-button click.delegate="makeIndeterminate()">make indeterminate</button>
+  </section>
+  <section>
+      Change events: ${changeEventCount}
+  </section>
+</template>

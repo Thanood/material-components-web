@@ -1,20 +1,13 @@
 import {inject, bindable, bindingMode, DOM} from 'aurelia-framework';
 
-// Since we don't have typings (yet) we require mdc-checkbox manually.
-// const MDCCheckboxModule = require('mdc-checkbox');
-// const {MDCCheckbox} = require('mdc-checkbox');
 import {MDCCheckbox} from '@material/checkbox';
-
-// Use webpack's require function to load the css
-// const MDC_CHECKBOX_STYLES = require('mdc-checkbox-styles');
-// DOM.injectStyles(MDC_CHECKBOX_STYLES);
 import '@material/checkbox/dist/mdc.checkbox.css';
 
-@inject(Element)
+@inject(DOM.Element)
 export class MdcCheckbox {
     @bindable({ defaultBindingMode: bindingMode.twoWay }) isChecked = false;
     @bindable({ defaultBindingMode: bindingMode.twoWay }) isIndeterminate = false;
-    @bindable() isDisabled = false;
+    @bindable({ defaultBindingMode: bindingMode.twoWay }) isDisabled = false;
     mdcCheckbox;
 
     constructor(private element: Element) { }

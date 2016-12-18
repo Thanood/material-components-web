@@ -1,0 +1,25 @@
+<template>
+  <section>
+    <h4>Simple values</h4>
+    <mdc-select mdc-select-label="pick a fruit group" change.delegate="handleValueChange($event)">
+      <li mdc-select-option>Bread, Cereal, Rice, and Pasta</li>
+      <li mdc-select-option>Vegetables</li>
+      <li mdc-select-option>Fruit</li>
+      <li mdc-select-option>Milk, Yogurt, and Cheese</li>
+    </mdc-select>
+  </section>
+  <section>
+    You selected: ${selectedValue | json}
+  </section>
+  <section>
+    <h4>Binding to objects</h4>
+    <mdc-select mdc-select-label="pick a fruit group" change.delegate="handleOptionChange($event)">
+      <li repeat.for="option of options" mdc-select-option.bind="option">
+        ${option.text}
+      </li>
+    </mdc-select>
+  </section>
+  <section>
+    You selected: ${selectedOption | json}
+  </section>
+</template>
